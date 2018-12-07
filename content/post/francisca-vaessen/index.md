@@ -6,7 +6,6 @@ tags:
 - pacio
 - team
 ---
-{{< bundle-image name="franny.jpg" alt="Description for screen readers." caption="Some caption" >}}
 
 I am delighted to announce that Francisca has joined Pacio as our Internationalisation Coordinator.
 
