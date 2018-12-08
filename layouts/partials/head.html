@@ -9,8 +9,14 @@
 -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	
+	<meta name="robots" content="index,follow">
+	<base href="{{ .Site.BaseURL }}">
+	{{ if ne .Kind "404" }}<link rel="canonical" href="{{ .Permalink }}">
+	{{- with $.Site.Params.description }}<meta name="description" content="{{.}}">{{ end }}
+	{{- range .AlternativeOutputFormats }} <!-- RSS, Atom feeds -->
+	<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" 
+	      href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">{{ end }}
+	{{- end }}
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ubuntu:700" rel="stylesheet">
 
 	{{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
