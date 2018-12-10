@@ -27,6 +27,5 @@
 	{{ $customjs := resources.Get "js/main.js" }}
 	{{ $scripts := slice $vendor $customjs | resources.Concat "app.js" | minify | fingerprint }}
 	<script type="text/javascript" src="{{ $scripts.Permalink }}" integrity="{{ $scripts.Data.Integrity }}" media="screen"></script>
-
 	{{ .Hugo.Generator -}}
 	{{- partial "favicon.html" . -}}

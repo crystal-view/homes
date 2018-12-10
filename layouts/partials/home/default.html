@@ -1,6 +1,13 @@
 <body class="container">
-    <div class="sidebar">
-            <button class="nav-btn"></button>
+    <div class="main-menu">
+    <!-- Navigation -->
+    <nav class="main-nav">
+            <ul>
+             {{ range .Site.Menus.mainnav}}
+             <li><a href="{{ .URL }}"> {{ .Name }}</a></li>
+             {{ end }}
+            </ul>
+          </nav>
         </div>
 
 <header class="header">

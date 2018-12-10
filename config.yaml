@@ -111,15 +111,25 @@ params:
 # NOTE: Don't put leading "/" in the url parameter
 menu:
     mainnav:
-        - name: "Home"
+        - name: "Main"
           url: "/"
-          identifier: "about"
+          identifier: "main"
           weight: 10
+
+        - name: "Homes"
+          url: "homes/"
+          identifier: "homes"
+          weight: 20
+
+        - name: "About"
+          url: "about/"
+          identifier: "about"
+          weight: 30
 
         - name: "Contact"
           url: "contact/"
           identifier: "contact"
-          weight: 20
+          weight: 40
 
       
 

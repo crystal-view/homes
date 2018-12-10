@@ -1,9 +1,16 @@
 {{ define "main"}}
 
-<body class="container">
-    <div class="sidebar">
-            <button class="nav-btn"></button>
-        </div>
+<body class="container-contact">
+        <div class="main-menu">
+                <!-- Navigation -->
+                <nav class="main-nav">
+                        <ul>
+                         {{ range .Site.Menus.mainnav}}
+                         <li><a href="{{ .URL }}"> {{ .Name }}</a></li>
+                         {{ end }}
+                        </ul>
+                      </nav>
+                    </div>
 
 <header class="header">
     <img src="img/logo-crystalview.png" alt="Crystal View logo" class="header__logo">
